@@ -1,0 +1,29 @@
+@import "tailwindcss";
+
+body {
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+@layer components {
+  .filters {
+    @apply p-1 bg-gray-100 w-fit rounded-lg flex gap-2 mt-2;
+  }
+
+  .filters input {
+    @apply hidden;
+  }
+
+  .filters label {
+    @apply py-1 px-2 rounded-md text-sm text-gray-500 font-bold cursor-pointer;
+  }
+
+  .filters input:checked + label {
+    @apply bg-white py-1 px-2 rounded-md text-black;
+  }
+
+  .add_new input,
+  .add_new select,
+  .add_new textarea {
+    @apply border border-gray-200 rounded-sm p-2 outline-0 w-full;
+  }
+}
