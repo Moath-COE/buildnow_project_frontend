@@ -5,19 +5,23 @@ body {
 }
 
 @layer components {
-  .filters {
+  .filters,
+  .chartFilters {
     @apply p-1 bg-gray-100 w-fit rounded-lg flex gap-2 mt-2;
   }
 
-  .filters input {
+  .filters input,
+  .chartFilters input {
     @apply hidden;
   }
 
-  .filters label {
+  .filters label,
+  .chartFilters label {
     @apply py-1 px-2 rounded-md text-sm text-gray-500 font-bold cursor-pointer;
   }
 
-  .filters input:checked + label {
+  .filters input:checked + label,
+  .chartFilters input:checked + label {
     @apply bg-white py-1 px-2 rounded-md text-black;
   }
 

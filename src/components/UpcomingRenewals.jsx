@@ -1,6 +1,6 @@
 export default function UpcomingRenewals() {
   return (
-    <div className="col-span-3 border border-gray-300 rounded-lg insent-shadow-lg h-full p-6 flex flex-col row-span-2">
+    <div className="col-span-4 border border-gray-300 rounded-lg insent-shadow-lg h-full p-6 flex flex-col row-span-2">
       <div>
         <h1 className="text-2xl font-bold">Upcoming Renewals</h1>
         <p className="text-gray-500">Subscriptions renewing soon</p>
