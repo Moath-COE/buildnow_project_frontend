@@ -3,7 +3,7 @@ import { FiSun } from "react-icons/fi";
 
 export default function Navbar() {
   return (
-    <header className="sticky top-0 z-10 border-b border-gray-200 bg-background">
+    <header className="sticky top-0 z-10 border-b border-gray-200 bg-background bg-white">
       <nav className="container flex h-16 items-center justify-between py-4 mx-auto">
         <div className="flex items-center gap-2">
           <h1 className="text-xl font-bold">Subscription Manager</h1>

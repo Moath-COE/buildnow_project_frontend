@@ -32,6 +32,17 @@ export default function AddNew(props) {
       props.setSubs((prev) => {
         return [...prev, data];
       });
+
+      setForm((prev) => {
+        return {
+          title: "",
+          price: 0,
+          cycle: "mn",
+          start_date: new Date(),
+          category: "ent",
+          description: "",
+        };
+      });
       props.setPopup((prev) => !prev);
     } else {
       alert("Subscription couldn't be added, " + res.statusText);

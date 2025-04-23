@@ -26,6 +26,7 @@ export default function Home() {
       setSubs(result);
     }
     fetchData();
+
     return;
   }, []);
 
@@ -37,10 +38,10 @@ export default function Home() {
         setSubs={setSubs}
         BASE_URL={BASE_URL}
       />
-      <TotalSpends />
+      <UpcomingRenewals subs={subs} />
       <CostBreakdown subs={subs} />
-      <UpcomingRenewals />
-      <PotentialSavings />
+      <TotalSpends subs={subs} BASE_URL={BASE_URL} />
+      <PotentialSavings subs={subs} />
       <AddNew
         togglePopup={togglePopup}
         popup={popup}
