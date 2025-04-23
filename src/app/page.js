@@ -8,7 +8,8 @@ import PotentialSavings from "@/components/PotentialSavings";
 import AddNew from "@/components/AddNew";
 
 export default function Home() {
-  const BASE_URL = "http://127.0.0.1:8000/";
+  // const BASE_URL = "http://127.0.0.1:8000/";
+  const BASE_URL = "https://buildnow-project.onrender.com";
 
   const [popup, setPopup] = useState(false);
   function togglePopup() {
