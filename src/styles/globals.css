@@ -1,5 +1,26 @@
 @import "tailwindcss";
 
+:root {
+  --main: 255, 255, 255;
+  --accent: 0, 0, 0;
+  --green: 54, 179, 126;
+  --yellow: 255, 171, 0;
+  --red: 255, 86, 48;
+  --border: 193, 199, 208;
+  --dark-gray: 165, 173, 186;
+}
+
+@theme {
+  --container-2x: "1400px";
+  --color-main: rgba(var(--main));
+  --color-accent: rgba(var(--accent));
+  --color-green: rgba(var(--green));
+  --color-yellow: rgba(var(--yellow));
+  --color-red: rgba(var(--red));
+  --color-border: rgba(var(--border));
+  --color-dark-gray: rgba(var(--dark-gray));
+}
+
 body {
   font-family: Arial, Helvetica, sans-serif;
 }
@@ -7,7 +28,7 @@ body {
 @layer components {
   .filters,
   .chartFilters {
-    @apply p-1 bg-gray-100 w-fit rounded-lg flex gap-2 mt-2;
+    @apply p-1 bg-border w-fit rounded-lg flex gap-2 mt-2;
   }
 
   .filters input,
@@ -17,7 +38,7 @@ body {
 
   .filters label,
   .chartFilters label {
-    @apply py-1 px-2 rounded-md text-sm text-gray-500 font-bold cursor-pointer;
+    @apply py-1 px-2 rounded-md text-sm text-accent/60 font-bold cursor-pointer;
   }
 
   .filters input:checked + label,

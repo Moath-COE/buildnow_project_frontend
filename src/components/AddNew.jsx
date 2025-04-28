@@ -9,7 +9,7 @@ export default function AddNew(props) {
     price: 0,
     cycle: "mn",
     start_date: new Date(),
-    category: "ent",
+    category: "Entertainment",
     description: "",
   });
 
@@ -39,7 +39,7 @@ export default function AddNew(props) {
           price: 0,
           cycle: "mn",
           start_date: new Date(),
-          category: "ent",
+          category: "Entertainment",
           description: "",
         };
       });
@@ -146,9 +146,9 @@ export default function AddNew(props) {
               });
             }}
           >
-            <option value="ent">Entertainment</option>
-            <option value="wrk">Work</option>
-            <option value="grc">Groceries</option>
+            <option value="Entertainment">Entertainment</option>
+            <option value="Work">Work</option>
+            <option value="Groceries">Groceries</option>
           </select>
         </div>
         <div className="flex flex-col gap-2 col-span-2 row-span-1">

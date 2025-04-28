@@ -6,7 +6,7 @@ export default function CostBreakdown(props) {
   const [chartFilters, setChartFilters] = useState("all");
 
   return (
-    <div className="col-span-3 row-span-3 border border-gray-300 rounded-lg insent-shadow-lg h-full p-6 flex flex-col">
+    <>
       <div className="flex items-start justify-between mb-4">
         <div>
           <h1 className="text-2xl font-bold">Cost Breakdown</h1>
@@ -54,14 +54,14 @@ export default function CostBreakdown(props) {
               data={props.subs
                 .filter((sub) => sub.cycle === chartFilters)
                 .map((sub) => {
-                  return { name: sub.title, spent: sub.total_spent };
+                  return { name: sub.title, Spends: sub.total_spends };
                 })}
               cycle={chartFilters}
             />
           ) : (
             <ChartSection
               data={props.subs.map((sub) => {
-                return { name: sub.title, spent: sub.total_spent };
+                return { name: sub.title, Spends: sub.total_spends };
               })}
               cycle={chartFilters}
             />
@@ -73,6 +73,6 @@ export default function CostBreakdown(props) {
           </p>
         )}
       </div>
-    </div>
+    </>
   );
 }

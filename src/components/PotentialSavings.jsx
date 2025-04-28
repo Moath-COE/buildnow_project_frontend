@@ -3,14 +3,14 @@ import SavingsCard from "./SavingsCard";
 
 export default function PotentialSavings(props) {
   return (
-    <div className="col-span-2 border border-gray-300 rounded-lg insent-shadow-lg h-full p-6 flex flex-col row-span-2">
-      <div>
+    <>
+      <div className="mb-4 flex justify-between items-center">
         <h1 className="text-2xl font-bold">Potential Savings</h1>
         <p className="text-gray-500">Monthly to Annual conversion</p>
       </div>
       <div
-        className="flex  justify-center flex-1 flex-col gap-2"
-        style={{ alignItems: props.subs.length > 0 ? "start" : "center" }}
+        className="flex items-center flex-1 flex-col gap-2"
+        style={{ justifyContent: props.subs.length > 0 ? "start" : "center" }}
       >
         {props.subs.length > 0 ? (
           props.subs.map((sub) =>
@@ -23,6 +23,6 @@ export default function PotentialSavings(props) {
           </p>
         )}
       </div>
-    </div>
+    </>
   );
 }
