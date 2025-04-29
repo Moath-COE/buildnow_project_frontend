@@ -43,7 +43,7 @@ export default function AddNew(props) {
           description: "",
         };
       });
-      props.setPopup((prev) => !prev);
+      props.togglePopup();
     } else {
       alert("Subscription couldn't be added, " + res.statusText);
     }

@@ -1,5 +1,3 @@
-"use client";
-
 import { useState } from "react";
 import { FaPlus, FaTrash } from "react-icons/fa6";
 import SubsCard from "./SubsCard";
@@ -27,7 +25,7 @@ export default function SubscriptionsList(props) {
         </div>
         <button
           type="button"
-          className=" px-4 py-2 rounded-lg flex gap-2 text-sm cursor-pointer hover:bg-accent/10 items-center border border-border "
+          className=" px-4 py-2 rounded-lg flex gap-2 text-sm cursor-pointer hover:bg-accent/10 items-center border border-border main-trans"
           onClick={props.togglePopup}
         >
           <FaPlus /> <span>Add new</span>

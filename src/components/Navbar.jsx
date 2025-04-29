@@ -11,14 +11,14 @@ export default function Navbar(props) {
         <div className="flex items-center gap-2">
           <button
             type="button"
-            className="bg-accent px-4 py-2 rounded-lg text-main flex gap-2 text-sm cursor-pointer hover:bg-accent/80 items-center transition-all duration-200"
+            className="bg-accent px-4 py-2 rounded-lg text-main flex gap-2 text-sm cursor-pointer hover:bg-accent/80 items-center main-trans"
             onClick={props.setPopup}
           >
             <FaPlus /> <span>Add subscription</span>
           </button>
           <button
             type="button"
-            className="border border-border p-2 rounded-lg text-lg cursor-pointer hover:bg-border transition-all duration-200"
+            className="border border-border p-2 rounded-lg text-lg cursor-pointer hover:bg-border main-trans"
           >
             <FiSun />
           </button>

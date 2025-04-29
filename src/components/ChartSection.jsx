@@ -30,10 +30,10 @@ export default function ChartSection(props) {
             dataKey="Spends"
             fill={
               props.cycle === "all"
-                ? "rgb(165, 173, 186)"
+                ? "rgb(193, 199, 208)"
                 : props.cycle === "mn"
-                ? "#FF474C"
-                : "#008000"
+                ? "rgba(30, 64, 175, 0.8)"
+                : "rgba(22, 101, 52, 0.8)"
             }
           />
         </BarChart>
