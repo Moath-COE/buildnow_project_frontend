@@ -10,16 +10,12 @@ export default function UpcomingRenewals(props) {
       const timeDifferenceDays = Math.floor(
         (nextPayment - today) / (1000 * 60 * 60 * 24)
       );
-      if (sub.cycle === "mn") {
-        return timeDifferenceDays <= 6;
-      } else if (sub.cycle === "yr") {
-        return timeDifferenceDays <= 6;
-      }
+      return timeDifferenceDays <= 6;
     });
   }
   return (
-    <div className="col-span-3 row-span-2 border border-gray-300 rounded-lg insent-shadow-lg h-full p-6 flex flex-col ">
-      <div className="mb-4">
+    <>
+      <div className="mb-4 flex justify-between items-center">
         <h1 className="text-2xl font-bold">Upcoming Renewals</h1>
         <p className="text-gray-500">Subscriptions renewing soon</p>
       </div>
@@ -29,19 +25,12 @@ export default function UpcomingRenewals(props) {
       >
         {props.subs.length > 0 ? (
           <ul className="flex flex-col gap-2 w-full h-full">
-            {getRenewals().map((sub) => (
-              <RenewalCard
-                key={sub.id}
-                sub={sub}
-                days={
-                  sub.cycle === "mn"
-                    ? (new Date(sub.next_payment) - Date.now()) /
-                      (1000 * 60 * 60 * 24)
-                    : (new Date(sub.next_payment) - Date.now()) /
-                      (1000 * 60 * 60 * 24)
-                }
-              />
-            ))}
+            {getRenewals().map((sub) => {
+              let nextPayment =
+                (new Date(sub.next_payment) - Date.now()) /
+                (1000 * 60 * 60 * 24);
+              return <RenewalCard key={sub.id} sub={sub} days={nextPayment} />;
+            })}
           </ul>
         ) : (
           <p className="text-center text-gray-500">
@@ -50,6 +39,6 @@ export default function UpcomingRenewals(props) {
           </p>
         )}
       </div>
-    </div>
+    </>
   );
 }

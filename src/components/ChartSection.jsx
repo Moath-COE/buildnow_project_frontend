@@ -27,13 +27,13 @@ export default function ChartSection(props) {
           <Tooltip content={<CustomTooltip />} />
           <Legend />
           <Bar
-            dataKey="spent"
+            dataKey="Spends"
             fill={
               props.cycle === "all"
-                ? "#000000"
+                ? "rgb(193, 199, 208)"
                 : props.cycle === "mn"
-                ? "#FF474C"
-                : "#008000"
+                ? "rgba(30, 64, 175, 0.8)"
+                : "rgba(22, 101, 52, 0.8)"
             }
           />
         </BarChart>
